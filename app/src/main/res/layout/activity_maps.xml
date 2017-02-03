@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MapsActivity">
+
+    <Button
+        android:text="출발지"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Call_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="0dp" />
+
+    <Button
+        android:text="도착지 검색"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inpitdirection_button"
+        android:onClick="FindDriectionButtonClicked"
+        android:layout_below="@+id/Call_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <fragment
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    class="com.google.android.gms.maps.MapFragment"
+    android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="340dp" />
+
+    <Button
+        android:text="전화걸기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Call_button1"
+        android:onClick="Call_button1Clicked"
+        android:layout_below="@+id/inpitdirection_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="165dp" />
+
+    <Button
+        android:text="포인트접수"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/point_button"
+        android:onClick="point_buttonClicked"
+        android:layout_alignBaseline="@+id/cash_button"
+        android:layout_alignBottom="@+id/cash_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="카드접수"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_button"
+        android:onClick="card_buttonClicked"
+        android:layout_alignBaseline="@+id/Call_button1"
+        android:layout_alignBottom="@+id/Call_button1"
+        android:layout_toRightOf="@+id/Call_button1"
+        android:layout_toEndOf="@+id/Call_button1"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+    <Button
+        android:text="현금접수"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cash_button"
+        android:onClick="cash_buttonClicked"
+        android:layout_alignBaseline="@+id/card_button"
+        android:layout_alignBottom="@+id/card_button"
+        android:layout_toRightOf="@+id/card_button"
+        android:layout_toEndOf="@+id/card_button" />
+
+
+</RelativeLayout>
